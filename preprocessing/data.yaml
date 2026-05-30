@@ -1,0 +1,8 @@
+path: ../data/data_subset
+
+train: image_subset/train
+val: image_subset/val
+test: image_subset/test
+
+names:
+  0: product
