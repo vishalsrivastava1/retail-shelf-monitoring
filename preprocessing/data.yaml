@@ -1,8 +1,8 @@
-path: ../data/data_subset
+path: preprocessing/dataset
 
-train: image_subset/train
-val: image_subset/val
-test: image_subset/test
+train: images/train
+val: images/val
+test: images/test
 
 names:
   0: product

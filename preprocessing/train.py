@@ -1,15 +1,23 @@
 import os
-os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
-
 from ultralytics import YOLO
 
-model = YOLO("yolov8n.pt")
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
-model.train(
-    data="data/data.yaml",
-    epochs=3,
-    imgsz=320,
-    batch=1,
-    device="cpu",
-    workers=0
-)
+
+def main():
+    model = YOLO("yolov8n.pt")
+
+    model.train(
+        data="preprocessing/data.yaml",
+        epochs=10,
+        imgsz=640,
+        batch=8,
+        device=0,
+        workers=0,
+        project="runs",
+        name="sku110k_yolov8n_gpu_test"
+    )
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,27 @@
+# Virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Dataset
+preprocessing/dataset/
+data/
+*.zip
+
+# Model weights
+*.pt
+
+# YOLO/Ultralytics outputs
+runs/
+
+# Streamlit/cache
+.streamlit/
+.cache/
+
+# OS/editor
+.DS_Store
+.vscode/
